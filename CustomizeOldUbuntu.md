@@ -40,3 +40,5 @@
 ```cd /usr/share/locale/en/LC_MESSAGES```
 ```sudo msgfmt -o unity.mo /vaio.po```
 
+```sudo gedit /usr/share/icons/default/index.theme```
+```gksudo /opt/extras.ubuntu.com/menulibre/bin/menulibre```
