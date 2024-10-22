@@ -1,5 +1,5 @@
 # chkdsk
-  ´´´ chkdsk <Nombre_disco> /r /f ```
+  ``` chkdsk <Nombre_disco> /r /f ```
   * /r verifica
   * /f bbusca sectores defectuosos y trata recuperar la información legible
 # diskpart ```diskpart```
@@ -8,7 +8,7 @@
     * Lista los discos
   ``` LIST PARTITION```
     * Lista las particiones
-  ``` LIST VOLUME ````
+  ``` LIST VOLUME ```
     * Lista los volumnes 
 ## SELECT 
   ``` SELECT DISK=1 ``` or ``` SELECT DISK 1 ```
