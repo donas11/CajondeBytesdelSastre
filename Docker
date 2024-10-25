@@ -3,7 +3,7 @@
 ### Docker Hub
 * Description
   * enviroment variables
-    ```-e VARIABLE_ENTORNO '''
+    ```-e VARIABLE_ENTORNO ```
 
 ## Comandos basicos
   * nombrar
@@ -16,7 +16,7 @@
   * Eliminar contenedor
     ``` Docker rm <conatainer_id/container_name> ```
     * ``` -f ```para forzar apagarlo 
-    * Todos los que han terminado: ``` docker rm $(docker ps --filter status=exited -q)
+    * Todos los que han terminado: ``` docker rm $(docker ps --filter status=exited -q) ```
   * Eliminar imagenes  
     * ``` docker rmi ubuntu:latest ```
     * ``` docker rmi $(docker images) ```
@@ -41,9 +41,9 @@
 ### Mover archivos del Host al contenedor
 ```docker cp RutaHost/Archivo NombreContenedor:RutaContenedor/Archivo```
 ### Guardar imagen 
-```docker save ni_image:latest | gzip > /home/images/myimage.tar.gz
+```docker save ni_image:latest | gzip > /home/images/myimage.tar.gz```
 ### importar imagen
-``` docker load < /home/images/myimage.tar.gz
+``` docker load < /home/images/myimage.tar.gz```
 
 ## Docker Facilita CI/CD
 ### Continuous Integration (CI) (Pipeline)
