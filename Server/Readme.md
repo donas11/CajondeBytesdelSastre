@@ -65,3 +65,42 @@ Le damos permisos al script:
 
 Ejecutamos
 ```sudo ./create_and_configure_users.sh user1 user2 user3 ```
+
+para restringir el uso del ssh solo a estos usurios podemos hacer en el archivo  ``` /etc/default/dropbear ``` modificamos ``` DROPBEAR_EXTRA_ARGS="-G sshusers"``` para restringir solo al grupo sshusers el uso de él ```sudo systemctl restart dropbear ```
+
+## Instalación de herramientas que utilizaremos
+``` sudo apt install curl ```
+``` sudo apt install wget ```
+``` sudo apt install nmap ```
+``` sudo apt install nano ```
+
+## Instalación de Servicios que utilizaremos
+```curl -s https://install.zerotier.com | sudo bash ```
+
+```sudo apt install python3 python3-pip python3-venv```
+```python3 -m venv devops```
+```source devops/bin/activate```
+```pip install localstack```
+
+
+```sudo apt-get install ca-certificates curl gnupg lsb-release```
+
+```sudo mkdir -p /etc/apt/keyrings```
+```curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg```
+
+```echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null```
+
+```sudo apt-get update```
+```sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin```
+
+```localstack start & pip install awscli```
+
+```nano ~/.bashrc  # o ~/.zshrc si usas Zsh```
+
+```alias aws.="aws --profile localstack --endpoint-url=http://localhost:4566"```
+
+```sudo apt install nodejs npm```
+
+```node -v```
+```npm -v```
+```sudo npm install -g azurite```
