@@ -108,7 +108,8 @@ para restringir el uso del ssh solo a estos usurios podemos hacer en el archivo 
 # Instalación K3S
 ```mermaid 
 graph TD;
-    K3s[Raspberry Pi - K3s (Master)] -->|Connection| K3sAgent[VAIO Laptop - K3s-agent]
+    K3s["Raspberry Pi - K3s Master"] -->|Connection| K3sAgent["VAIO Laptop - K3s Agent"]
+
 ```
 
 ## Instalacion K3S en RaspberryPI
