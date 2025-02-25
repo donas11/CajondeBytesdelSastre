@@ -104,3 +104,23 @@ para restringir el uso del ssh solo a estos usurios podemos hacer en el archivo 
 ```node -v```
 ```npm -v```
 ```sudo npm install -g azurite```
+
+# Instalación K3S
+```mermaid 
+graph TD;
+    K3s[Raspberry Pi - K3s (Master)] -->|Connection| K3sAgent[VAIO Laptop - K3s-agent]
+```
+
+## Instalacion K3S en RaspberryPI
+
+se escogio dietpi como distribución por que consumia menos RAM para asi poder disponer del maximo disponible de ella
+
+```curl -sfL https://get.k3s.io | sh - ```
+
+kubeconfig esta en ```/etc/rancher/k3s/k3s.yaml```
+
+## Instalacion K3S en VAIO
+
+```sudo k3s agent --server https://IPRaspberryPIserver:6443 --token ${NODE_TOKEN}```
+
+el NODE_TOKEN viene en ```/var/lib/rancher/k3s/server/node-token```
