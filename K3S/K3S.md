@@ -95,3 +95,32 @@ If there is a specific field you want to find, such as the CPU architecture, to 
 
 [Multipass](https://canonical.com/multipass)
 
+
+# Despliege de prueba
+
+```
+docker build -t flask-app:0.1.0 .
+docker run --name flask-app -p 5000:5000 flask-app:0.1.0 
+```
+
+```
+docker rm -f flask-app
+docker build -t flask-app:0.1.1 .
+```
+
+
+```
+docker run --name flask-app -p 5000:5000 flask-app:0.1.1
+
+docker login --username alexallis2
+# Paste the Access Token as your password
+
+docker build -t docker.io/alexellis2/flask-app:0.1.1 .
+docker push alexellis2/flask-app:0.1.1
+```
+
+There are three ways to access a Pod or service within a Kubernetes cluster:
+
+Port-forwarding use of kubectl
+Exposing a LoadBalancer using a cloud service or software addition like [MetalLB](https://metallb.io/) or [inlets-operator](https://github.com/inlets/inlets-operator)
+Exposing a NodePort
