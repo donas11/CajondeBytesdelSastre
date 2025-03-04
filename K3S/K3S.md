@@ -21,7 +21,8 @@ Comprobar puerto esta abierto:
 Certificados:
 ```/var/lib/rancher/k3s/server/tls```
 
-
+## K3d agent
+```curl -sfL https://get.k3s.io | K3S_URL="IP_SERVER:6443" K3S_TOKEN="hasjhfjhafsfashjkfhjahsjkfhjdshjf2837482c34728934d23809d23" sh -```
 
 # Tools
 [K3sup](https://github.com/alexellis/k3sup)
