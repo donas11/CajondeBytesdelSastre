@@ -129,7 +129,7 @@ el NODE_TOKEN viene en ```/var/lib/rancher/k3s/server/node-token```
 ## Instalacion K3d en PC
 ```curl -sfL https://get.k3s.io | K3S_URL="https://IPRaspberryPIserver:6443" K3S_TOKEN="NODE_TOKEN" sh - ```
 y quedaría así:
-```
+```mermaid 
 graph TD;
     K3sAgent["VAIO Laptop - K3s Agent"] -- Connection --> K3s["Raspberry Pi - K3s Master"]
     K3dAgent["PC - K3d Agent"] -- Connection --> K3s
