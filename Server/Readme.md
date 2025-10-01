@@ -134,3 +134,21 @@ graph TD;
     K3sAgent["VAIO Laptop - K3s Agent"] -- Connection --> K3s["Raspberry Pi - K3s Master"]
     K3dAgent["PC - K3d Agent"] -- Connection --> K3s
 ```
+
+## Instalacion Gemini-CLI
+
+### Tuve que instalar la última versión 22.20.0
+Install/upgrade nvm (skip if you already have it)
+```curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash```
+then restart your shell, or:
+```
+export NVM_DIR="HOME/.nvm"[−s"NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+```
+Install and use Node 22 LTS (or Node 20)
+```nvm install --lts```
+```nvm use --lts```
+```node -v```
+Clean up the sudo install and reinstall
+```sudo npm uninstall -g @google/gemini-cli```
+```npm i -g @google/gemini-cli```
+```gemini --version```
